@@ -54,7 +54,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a scatter plot showing the extent of unbalanceness in the classes
 
-![alt text][image8]
+![alt_text][image8]
 
 ###Design and Test a Model Architecture
 
@@ -77,7 +77,7 @@ To add more data to the the data set, I used:
 
 Here is are examples of the augmented images:
 
-![alt text][image1]
+![alt_text][image1]
 ![alt_text][image2]
 
 The difference between the original data set and the augmented data set is the 54714 images. 
@@ -141,8 +141,8 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image9] ![alt text][image10] ![alt text][image11] 
-![alt text][image12] ![alt text][image13]
+![alt_text][image9] ![alt_text][image10] ![alt_text][image11] 
+![alt_text][image12] ![alt_text][image13]
 
 The second image might be difficult to classify because of insufficient lighting whereas the 4th image is overexposed.
 
