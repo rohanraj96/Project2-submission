@@ -21,11 +21,11 @@ The goals / steps of this project are the following:
 [image6]: ./report_imgs/valid_acc.png "Validation Accuracy"
 [image7]: ./report_imgs/training_Acc.png "Training Accuracy"
 [image8]: ./report_imgs/visualization.png "Visualization"
-[image9]: ./report_imgs/1.ppm "img1"
-[image10]: ./report_imgs/2.ppm "img2"
-[image11]: ./report_imgs/3.ppm "img3"
-[image12]: ./report_imgs/4.ppm "img4"
-[image13]: ./report_imgs/5.ppm "img5"
+[image9]: ./street_view/1.png "img1"
+[image10]: ./street_view/2.png "img2"
+[image11]: ./street_view/3.png "img3"
+[image12]: ./street_view/4.png "img4"
+[image13]: ./street_view/5.png "img5"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -144,7 +144,7 @@ Here are five German traffic signs that I found on the web:
 ![alt_text][image9] ![alt_text][image10] ![alt_text][image11] 
 ![alt_text][image12] ![alt_text][image13]
 
-The second image might be difficult to classify because of insufficient lighting whereas the 4th image is overexposed.
+The 3rd and 4th images are particularly under-exposed and hard to classify, whereas the 1st and 5th are relatively easy to classify.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -152,19 +152,19 @@ Here are the results of the prediction:
 
 | Image							| Prediction							| 
 |:-----------------------------:|:-------------------------------------:| 
-| Dangerous curve to the right	| Dangerous curve to the right			| 
-| Slippery road					| Slippery road							|
-| Speed Limit (30 km/h)			| Speed Limit (30 km/h)					|
-| Keep Left						| Keep Left					 			|
-| Speed Limit (20 km/h)			| Speed Limit (20 km/h)					|
+| Parking	| Speed limit (60km/h)			| 
+| No Entry					| Speed limit (60km/h)							|
+| No Stopping		| Speed limit (60km/h)					|
+| Right turn ahead						| Speed limit (60km/h)					 			|
+| Speed Limit (30 km/h)			| Priority Road					|
 
 
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 12630 test images.
+The model was able to correctly guess 0 of the 5 traffic signs, which gives an accuracy of 0%. This compares in stark contrast to the accuracy on the test set of 12630 test images, which was 92.05%.
+However, I suspect this poor performance is due to the vertical lines that have creeped into the image during the preprocessing pipeline. This could be because the training images were of .ppm format whereas these 5 images are of .png format
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 3rd from last cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 3rd from last code-cell of the Ipython notebook.
 
-For the first image, the model is not very sure that this is a Dangerous curve to the right sign (probability of 0.27), but the image does contain a Dangerous curve to the right sign. However, this is because the image has poor lighting and even then the correct class has the highest probability so the output is correct.
-
-For the other images the model is pretty confident about its scores.
+After going through the pre-processing pipeline, the images invariably end up with vertical lines throughout the width which occludes most of the image. This might be due to the cv2.cvtColor function.
+As a result, the model isn't very confident about any of the predictions it makes and therefore the top softmax probabilities are more or less the same.
