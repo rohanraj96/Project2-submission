@@ -21,11 +21,11 @@ The goals / steps of this project are the following:
 [image6]: ./report_imgs/valid_acc.png "Validation Accuracy"
 [image7]: ./report_imgs/training_Acc.png "Training Accuracy"
 [image8]: ./report_imgs/visualization.png "Visualization"
-[image9]: ./german_trafficsign_dataset/GTSRB/Training/testing/00000_00000.ppm "img1"
-[image10]: ./german_trafficsign_dataset/GTSRB/Training/testing/00000_00022.ppm "img2"
-[image11]: ./german_trafficsign_dataset/GTSRB/Training/testing/00000_00023.ppm "img3"
-[image12]: ./german_trafficsign_dataset/GTSRB/Training/testing/00000_00028.ppm "img4"
-[image13]: ./german_trafficsign_dataset/GTSRB/Training/testing/00002_00010.ppm "img5"
+[image9]: ./report_imgs/1.ppm "img1"
+[image10]: ./report_imgs/2.ppm "img2"
+[image11]: ./report_imgs/3.ppm "img3"
+[image12]: ./report_imgs/4.ppm "img4"
+[image13]: ./report_imgs/5.ppm "img5"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
